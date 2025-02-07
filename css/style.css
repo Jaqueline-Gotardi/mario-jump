@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*o self no botao do html faz com que ao clicar em Iniciar Jogo, ele nao será direcionado para uma outra guia*/
+
+.game-board {
+    width: 100%;
+    height: 903px;
+    border-bottom: 60px solid rgb(35, 160, 35) ;
+    background: linear-gradient(#87cee8, #E0F6FF);
+    margin: 0 auto; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.time {
+    position: absolute;
+    width: 180px;
+    height: 150px;
+    top: 18x;
+}
+
+#Iniciar { 
+    width: 350px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(227, 235, 235);
+    color: black;
+    font-size: 1.3em;
+    margin-top: -560px;
+    margin-inline: 40%;
+    text-align: center;
+    padding: 10px 20px;
+    padding-top: 60px;
+    position: absolute;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+#Iniciar:hover {
+    transform: scale(1.1);
+    border: 2px solid #edeff0;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3); /*sombra*/
+    background: linear-gradient(to bottom, #b8ddeb, #d3e4eb);
+}
+
+#Reiniciar { 
+    display: none;
+    width: 350px;
+    border: none;
+    border-radius : 5px;
+    background-color: rgb(227, 235, 235);
+    color: black;
+    font-size: 1.3em;
+    margin-top: -560px;
+    margin-inline: 40%;
+    text-align: center;
+    padding: 10px 20px;
+    padding-top: 60px;
+    position: absolute;
+    transition: background-color 0.5 ease;
+    cursor: pointer;
+} 
+
+#Reiniciar:hover{
+    transform: scale(1.1);
+    border: 2px solid #edeff0;
+    box-shadow: 10 px 15px 10px rgba(0, 0, 0, 0.3); /*sombra*/
+    background: linear-gradient(to bottom, #b8ddeb, #d3e4eb);
+}
+
+
+.pipe { /*pipe é o nome do obstáculo do jogo*/
+    position: absolute;
+    bottom: 0;
+    margin: -1%;
+    width: 80px;
+      /* distãncia máxima em que o Mário
+       pode ficar do pipe*/
+    animation: pipe-animation 2s infinite linear;  
+}
+
+.mario {
+    position: absolute;
+    width: 150px;  
+    bottom: 0; 
+}
+
+.nuvem {
+    position: absolute;
+    height: 50%;
+    width: 550px;
+    animation: nuvem-animation 20s infinite linear;
+}
+
+.nuvem2 {
+    position: absolute;
+    height: 50%;
+    width: 550px;
+    animation: nuvem-animation 15s infinite linear;
+}
+
+.nuvem3 {
+    position: absolute;
+    height: 50%;
+    width: 550px;
+    animation: nuvem-animation 29s infinite linear;
+}
+
+.arvoregrande {
+    position: absolute;
+    bottom: 0;
+    margin: -20px;
+    height: 51%;
+    animation: arvoregrande-animation 27s infinite linear;
+}
+
+.arvore2 {
+    position: absolute;
+    bottom: 0;
+    margin: -20px;
+    height: 40%;
+    animation: arvore2-animation 19s infinite linear;
+}
+
+.arvore {
+    position: absolute;
+    bottom: 0;
+    margin: -20px;
+    height: 50%;
+    animation: arvore-animation 25s infinite linear;
+}
+
+.arvore3 {
+    position: absolute;
+    bottom: 0;
+    margin: -2%;
+    height: 50%;
+    animation: arvore3-animation 30s infinite linear;
+}
+
+.pomar {
+    position: absolute;
+    bottom: 0;
+    margin: -100px;
+    height: 30%;
+    animation: pomar-animation 22s infinite linear;
+}
+
+.pomar1 {
+    position: absolute;
+    bottom: 0;
+    margin: -100px;
+    height: 30%;
+    animation: pomar1-animation 26s infinite linear;
+}
+
+.gramado {
+    position: absolute;
+    bottom: 0;
+    margin: -118px;
+    height: 30%;
+    animation: pomar1-animation 31s infinite linear;
+}
+
+.pedra {
+        position: absolute;
+        bottom: 0;
+        margin: -118px;
+        height: 21%;
+        animation: pomar1-animation 18s infinite linear;
+    }
+
+    .pedra1 {
+        position: absolute;
+        bottom: 0;
+        margin: -118px;
+        height: 21%;
+        animation: pomar1-animation 24s infinite linear;
+    }
+
+
+.jump{
+    animation: jump 500ms ease-out; /* velocidade de salto */
+}
+
+   @keyframes pipe-animation { /*keyframe permite criar sequências de animação*/
+    from {
+       right: -78px;
+    }  
+    
+    to {
+       right: 100%;
+    }
+   }  
+
+   @keyframes  jump {
+       0% {
+           bottom: 0;
+       }
+       40% {
+           bottom: 180px;
+       }
+   
+       50%{
+           bottom: 180px;
+       }
+   
+       60%{
+           bottom: 180px;
+       }
+   
+       100% {
+           bottom: 0;
+       }
+   }
+
+ @keyframes nuvem-animation { /*duração da animação(tempo)*/
+        from {
+            right: -550px;
+
+        }
+
+        to {
+            right: 100%;
+        }
+}
+
+@keyframes arvoregrande-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+ @keyframes arvore2-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes arvore-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes arvore3-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pomar-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pomar1-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes gramado-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pedra-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pedra1-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
