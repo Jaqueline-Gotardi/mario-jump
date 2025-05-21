@@ -86,7 +86,11 @@
 
 .mario {
     position: absolute;
+<<<<<<< HEAD
     width: 150px;  
+=======
+    width: 150px;   
+>>>>>>> cbc0a6b (atualizei README.md com uma versão mais profissional e com futuras ideias)
     bottom: 0; 
 }
 
